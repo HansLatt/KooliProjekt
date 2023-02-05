@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Sum Page";
+}
+
+<style>
+table, th, td {
+  border:1px solid black;
+  text-align:center;
+}
+</style>
+ 
+<h1>Kehamassiindeksi arvutamine</h1>
+ 
+<form asp-controller="Home" asp-action="add" method="post">
+ 
+    <span>Sisesta enda kaal : </span> <input id="num1" type="decimal" name="txtFirst" /> <br /><br />
+    <span>Sisesta enda pikkus meetrites : </span> <input id="num1" type="decimal" name="txtSecond" /> <br /><br />
+    <input id="Submit1" type="submit" value="Arvuta" />
+</form>
+ 
+<h2>Sinu kehamassiindeks on @ViewBag.SumResult</h2>
+
+
+<table style="width:40%">
+  <tr>
+    <th>Kategooria</th>
+    <th>KMI vahemik</th>
+  </tr>
+  <tr>
+    <td>Tervisele ohtlik alakaal</td>
+    <td>< 16</td>
+  </tr>
+  <tr>
+    <td>Alakaal</td>
+    <td>16 - 18.5</td>
+  </tr>
+  <tr>
+    <td>Normaakaal</td>
+    <td>18.5 - 25</td>
+  </tr>
+  <tr>
+    <td>Ülekaal</td>
+    <td>25.1 - 30</td>
+  </tr>
+  <tr>
+    <td>Rasvumine</td>
+    <td>30.1 - 35</td>
+  </tr>
+  <tr>
+    <td>Tugev rasvumine</td>
+    <td>35.1 - 40</td>
+  </tr>
+  <tr>
+    <td>Tervisele ohtilk rasvumine</td>
+    <td>> 40.1</td>
+  </tr>
+</table>

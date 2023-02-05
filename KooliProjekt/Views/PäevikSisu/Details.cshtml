@@ -1,0 +1,30 @@
+﻿@model KooliProjekt.Models.PäevikSisuModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Päevik</h4>
+    <hr />
+    <dl class="dl-vertical">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+            @Html.DisplayTextFor(model => model.Date)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Harjutus)
+            @Html.DisplayTextFor(model => model.Harjutus)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kordused)
+            @Html.DisplayTextFor(model => model.Kordused)
+        </dt>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
